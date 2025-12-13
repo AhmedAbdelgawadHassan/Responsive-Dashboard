@@ -13,6 +13,7 @@ dependencies:
 
   cupertino_icons: ^1.0.8
   flutter_svg: ^2.2.3  # لأن صورك SVG ودا ضروري
+  gap: ^3.0.1
 
 dev_dependencies:
   flutter_test:
@@ -31,4 +32,5 @@ flutter:
   fonts:
     - family: Montserrat
       fonts:
-        - asset: assets/fonts/Montserrat-Medium.ttf
+        - asset: assets/fonts/Montserrat-Regular.ttf
+          

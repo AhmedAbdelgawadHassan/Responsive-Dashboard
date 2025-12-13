@@ -1,5 +1,5 @@
-class Assets {
-  Assets._();
+class AppImages {
+  AppImages._();
   
   /// Assets for imagesAvatar1
   /// assets/images/avatar_1.svg

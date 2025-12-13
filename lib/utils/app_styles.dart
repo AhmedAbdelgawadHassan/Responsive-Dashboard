@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-abstract class AppStyles 
+abstract class AppStyles    // App Styles taked from Style Organizer pluggin
 {
   static const TextStyle styleRegular16 =TextStyle(
     fontSize: 16,
