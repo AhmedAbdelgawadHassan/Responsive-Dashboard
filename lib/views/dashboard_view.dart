@@ -9,6 +9,7 @@ class DashboardView extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        backgroundColor: Color(0XFFF7F9FA),
         body: AdaptiveLayoutWidget(
           mobileLayout: (context) => SizedBox(),
           tabletLayout: (context) => SizedBox(),
