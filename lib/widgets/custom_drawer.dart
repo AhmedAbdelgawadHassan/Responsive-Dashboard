@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:responsive_dashboard/models/drawer_item_model.dart';
+import 'package:responsive_dashboard/models/user_info_model.dart';
 import 'package:responsive_dashboard/utils/app_images.dart';
 import 'package:responsive_dashboard/widgets/drawer_item.dart';
 import 'package:responsive_dashboard/widgets/drawer_items_listView.dart';
@@ -17,34 +18,40 @@ class CustomDrawer extends StatelessWidget {
         slivers: [
           SliverToBoxAdapter(
             child: UserInfoListtile(
-              image: AppImages.imagesAvatar3,
-              title: 'Lekan Okeowo',
-              subtitle: 'demo@gmail.com',
+              userInfoModel: UserInfoModel(
+                title: 'Lekan Okeowo',
+                subtitle: 'demo@gmail.com',
+                image: AppImages.imagesAvatar3,
+              ),
             ),
           ),
           SliverToBoxAdapter(child: Gap(10)),
-          DrawerItemsListview(),  // Sliver List ALready
-        SliverFillRemaining(
-          hasScrollBody: false, 
-          child: Column(
-            children: [
-              Expanded(child: SizedBox(height: 20,)),  // عادي استخدم Expanded داخل SliverFillRemaining
+          DrawerItemsListview(), // Sliver List ALready
+          SliverFillRemaining(
+            hasScrollBody: false,
+            child: Column(
+              children: [
+                Expanded(
+                  child: SizedBox(height: 20),
+                ), // عادي استخدم Expanded داخل SliverFillRemaining
                 DrawerItem(
-            drawerItemModel: DrawerItemModel(
-              image: AppImages.imagesSettings,
-               title: 'System Settings'),
-            isActive: false,
+                  drawerItemModel: DrawerItemModel(
+                    image: AppImages.imagesSettings,
+                    title: 'System Settings',
+                  ),
+                  isActive: false,
+                ),
+                DrawerItem(
+                  drawerItemModel: DrawerItemModel(
+                    image: AppImages.imagesLogout,
+                    title: 'Logout Account',
+                  ),
+                  isActive: false,
+                ),
+                Gap(48),
+              ],
+            ),
           ),
-           DrawerItem(
-            drawerItemModel: DrawerItemModel(
-              image: AppImages.imagesLogout,
-               title: 'Logout Account'),
-            isActive: false,
-          ),
-          Gap(48)
-            ],
-          ),
-        )
         ],
       ),
     );

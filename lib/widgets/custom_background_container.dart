@@ -1,10 +1,19 @@
 import 'package:flutter/material.dart';
 
 class CustomBackgroundContainer extends StatelessWidget {
-  const CustomBackgroundContainer({super.key});
+  const CustomBackgroundContainer({super.key, required this.child, required this.padding});
+  final Widget child;
+  final double padding;
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Container(
+      padding: EdgeInsets.all(padding),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.all(Radius.circular(12)),
+        color: Colors.white,
+      ),
+      child: child,
+    );
   }
 }
