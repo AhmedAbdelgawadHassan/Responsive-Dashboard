@@ -11,6 +11,7 @@ class AllEpenses extends StatelessWidget {
   Widget build(BuildContext context) {
     return CustomBackgroundContainer(
       padding: 20,
+      margin: 20,
       child: Column(
         children: [
           AllExpenesesHeader(),
