@@ -10,6 +10,7 @@ class MyCardSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CustomBackgroundContainer(
+      margin: 20,
       borderRaduis: BorderRadius.only(
         topLeft: Radius.circular(20),
         topRight: Radius.circular(20)),
