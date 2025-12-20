@@ -12,6 +12,7 @@ class AllEpenses extends StatelessWidget {
     return CustomBackgroundContainer(
       padding: 20,
       margin: 20,
+      borderRaduis: BorderRadius.circular(12),
       child: Column(
         children: [
           AllExpenesesHeader(),

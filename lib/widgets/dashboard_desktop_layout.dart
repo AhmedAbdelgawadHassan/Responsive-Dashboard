@@ -4,6 +4,7 @@ import 'package:responsive_dashboard/widgets/all_expneses.dart';
 import 'package:responsive_dashboard/widgets/custom_drawer.dart';
 import 'package:responsive_dashboard/widgets/my_card%20_sectiondart';
 import 'package:responsive_dashboard/widgets/quick_invoice.dart';
+import 'package:responsive_dashboard/widgets/transactions_history_section.dart';
 class DashboardDesktopLayout extends StatelessWidget {
   const DashboardDesktopLayout({super.key});
 
@@ -26,7 +27,12 @@ class DashboardDesktopLayout extends StatelessWidget {
         Gap(24),
         Expanded(
           flex: 2,
-          child: MyCardSection())
+          child: Column(
+            children: [
+              MyCardSection(),
+              TransactionsHistorySection()
+            ],
+          ))
       ],
     );
 }}

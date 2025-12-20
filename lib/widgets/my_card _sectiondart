@@ -10,13 +10,16 @@ class MyCardSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CustomBackgroundContainer(
+      borderRaduis: BorderRadius.only(
+        topLeft: Radius.circular(20),
+        topRight: Radius.circular(20)),
       padding: 20,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text('My Card',style: AppStyles.styleSemiBold20,),
           Gap(10),
-         MycardsPageview(),
+            MycardsPageview(),
         ],
       ),
     );
