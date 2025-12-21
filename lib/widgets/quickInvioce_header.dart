@@ -18,7 +18,7 @@ class QuickinvioceHeader extends StatelessWidget {
         shape: BoxShape.circle
       ),
       child: 
-      Icon(Icons.add,color: Color(0xff4DB5EF),),
+      IconButton(onPressed: (){}, icon: Icon(Icons.add,color: Color(0xff4DB5EF),),)
      )
       ],
     );

@@ -10,7 +10,7 @@ class CustomTextfield extends StatelessWidget {
     return  TextField(
       decoration: InputDecoration(
         hintText: hintText,
-        hintStyle: AppStyles.styleRegular16,
+        hintStyle: AppStyles.styleRegular14.copyWith(color: Color(0xffBDBDBD)),
         fillColor: Color(0xffF7F7F7),
         filled: true,
         border: OutlineInputBorder(

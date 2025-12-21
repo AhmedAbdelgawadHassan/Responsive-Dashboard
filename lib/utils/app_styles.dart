@@ -31,9 +31,9 @@ static const TextStyle styleSemiBold16 =TextStyle(
     color: Color(0XFF064060),
   );
 
-   static const TextStyle styleRegular12 =TextStyle(
+   static const TextStyle styleSemiBold12 =TextStyle(
     fontSize: 12,
-    fontWeight: FontWeight.w400,
+    fontWeight: FontWeight.w600,
     fontFamily: 'Montserrat',
     color: Color(0XFFAAAAAA),
   );

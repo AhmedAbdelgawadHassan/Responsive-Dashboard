@@ -29,23 +29,23 @@ class NonActiveAllexpensesItem extends StatelessWidget {
             children: [
               Container(
                 padding: EdgeInsets.all(16),
-                width: 60,
-                height: 60,
+                width: 50,
+                height: 50,
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
                   color: Color(0XFFFAFAFA),
                 ),
-                child: SvgPicture.asset(allExpensesItemModel.image),
+                child: Center(child: SvgPicture.asset(allExpensesItemModel.image,height: 32,width: 32,)),
               ),
               Spacer(),
               Icon(Icons.arrow_forward_ios)
             ],
           ),
-          Gap(34),
+          Gap(20),
           Text(allExpensesItemModel.title,style: AppStyles.styleSemiBold16,),
-          Gap(10),
+          Gap(5),
           Text(allExpensesItemModel.date,style: AppStyles.styleRegular14,),
-          Gap(15),
+          Gap(5),
           Text(allExpensesItemModel.date,style: AppStyles.styleSemiBold24,)
         ],
       ),
@@ -79,23 +79,23 @@ class ActiveAllexpensesItem extends StatelessWidget {
             children: [
               Container(
                 padding: EdgeInsets.all(16),
-                width: 60,
-                height: 60,
+                width: 50,
+                height: 50,
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
                   color: Color(0xff5FBCF1),
                 ),
-                child: SvgPicture.asset(allExpensesItemModel.image,color: Colors.white,),
+                child: SvgPicture.asset(allExpensesItemModel.image,color: Colors.white,height: 32,width: 32,),
               ),
               Spacer(),
               Icon(Icons.arrow_forward_ios,color: Colors.white,)
             ],
           ),
-          Gap(34),
+          Gap(20),
           Text(allExpensesItemModel.title,style:  AppStyles.styleSemiBold16.copyWith(color: Colors.white),),
-          Gap(10),
+          Gap(5),
           Text(allExpensesItemModel.date,style: AppStyles.styleRegular14.copyWith(color: Colors.white),),
-          Gap(15),
+          Gap(5),
           Text(allExpensesItemModel.date,style: AppStyles.styleSemiBold24.copyWith(color: Colors.white),)
         ],
       ),

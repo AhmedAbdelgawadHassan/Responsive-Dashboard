@@ -10,13 +10,13 @@ class QuickInvoice extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CustomBackgroundContainer(
-      padding: 24,
+      padding: 15,
       borderRaduis: BorderRadius.circular(12),
-      child: CustomScrollView(
-        slivers: [
-   SliverToBoxAdapter(child: QuickinvioceHeader()),
-   SliverToBoxAdapter(child: Gap(12)),
-   SliverToBoxAdapter(child: LatestTransaction())
+      child: Column(
+        children: [
+   QuickinvioceHeader(),
+   Gap(12),
+   LatestTransaction()
         ],
       )
     );

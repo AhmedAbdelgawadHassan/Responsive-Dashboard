@@ -15,13 +15,7 @@ class LatestTransaction extends StatelessWidget {
         Text('Latest Transaction',style: AppStyles.styleRegular16,),
         Gap(20),
         LatestTransactionsListview(),
-        Divider(
-            thickness: 1,
-            color: Color(0xffEEEEEE),
-            indent: 10,
-            endIndent: 10,
-            height: 50,
-           ),
+        Gap(10),
            QuickInvoiceForm()
       ],
     );
