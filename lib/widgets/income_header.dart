@@ -11,7 +11,7 @@ class IncomeHeader extends StatelessWidget {
       children: [
         Text(
           'Income',
-          style: AppStyles.styleSemiBold20,
+          style: AppStyles.styleSemiBold20(context),
         ),
         Spacer(),
         RangeOptions()

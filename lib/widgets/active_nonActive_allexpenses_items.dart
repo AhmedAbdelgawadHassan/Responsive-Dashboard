@@ -27,26 +27,38 @@ class NonActiveAllexpensesItem extends StatelessWidget {
         children: [
           Row(
             children: [
-              Container(
-                padding: EdgeInsets.all(16),
-                width: 50,
-                height: 50,
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  color: Color(0XFFFAFAFA),
+              Flexible(
+                child: ConstrainedBox(   // to limit the width of the container 
+                  constraints: BoxConstraints(maxWidth: 60),
+                  child: AspectRatio(
+                    aspectRatio: 1,
+                    child: Container(
+                            
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: Color(0XFFFAFAFA),
+                      ),
+                      child: Center(child: SvgPicture.asset(allExpensesItemModel.image,height: 32,width: 32,)),
+                    ),
+                  ),
                 ),
-                child: Center(child: SvgPicture.asset(allExpensesItemModel.image,height: 32,width: 32,)),
               ),
               Spacer(),
-              Icon(Icons.arrow_forward_ios)
+            Flexible(child: Icon(Icons.arrow_forward_ios))
             ],
           ),
           Gap(20),
-          Text(allExpensesItemModel.title,style: AppStyles.styleSemiBold16,),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(allExpensesItemModel.title,style: AppStyles.styleSemiBold16(context),)),
           Gap(5),
-          Text(allExpensesItemModel.date,style: AppStyles.styleRegular14,),
+          FittedBox(
+             fit: BoxFit.scaleDown,
+            child: Text(allExpensesItemModel.date,style: AppStyles.styleRegular14(context),)),
           Gap(5),
-          Text(allExpensesItemModel.date,style: AppStyles.styleSemiBold24,)
+          FittedBox(
+             fit: BoxFit.scaleDown,
+            child: Text(allExpensesItemModel.price,style: AppStyles.styleSemiBold24(context),))
         ],
       ),
     );
@@ -77,26 +89,38 @@ class ActiveAllexpensesItem extends StatelessWidget {
         children: [
           Row(
             children: [
-              Container(
-                padding: EdgeInsets.all(16),
-                width: 50,
-                height: 50,
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  color: Color(0xff5FBCF1),
+              Flexible(
+                child: ConstrainedBox(
+                  constraints: BoxConstraints(maxWidth: 60),
+                  child: AspectRatio(
+                    aspectRatio: 1,
+                    child: Container(
+                    
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: Color(0xff5FBCF1),
+                      ),
+                      child: Center(child: SvgPicture.asset(allExpensesItemModel.image,color: Colors.white,height: 32,width: 32,)),
+                    ),
+                  ),
                 ),
-                child: SvgPicture.asset(allExpensesItemModel.image,color: Colors.white,height: 32,width: 32,),
               ),
               Spacer(),
-              Icon(Icons.arrow_forward_ios,color: Colors.white,)
+              Flexible(child: Icon(Icons.arrow_forward_ios,color: Colors.white,))
             ],
           ),
           Gap(20),
-          Text(allExpensesItemModel.title,style:  AppStyles.styleSemiBold16.copyWith(color: Colors.white),),
+          FittedBox(
+             fit: BoxFit.scaleDown,
+            child: Text(allExpensesItemModel.title,style:  AppStyles.styleSemiBold16(context).copyWith(color: Colors.white),)),
           Gap(5),
-          Text(allExpensesItemModel.date,style: AppStyles.styleRegular14.copyWith(color: Colors.white),),
+          FittedBox(
+             fit: BoxFit.scaleDown,
+            child: Text(allExpensesItemModel.date,style: AppStyles.styleRegular14(context).copyWith(color: Colors.white),)),
           Gap(5),
-          Text(allExpensesItemModel.date,style: AppStyles.styleSemiBold24.copyWith(color: Colors.white),)
+          FittedBox(
+             fit: BoxFit.scaleDown,
+            child: Text(allExpensesItemModel.price,style: AppStyles.styleSemiBold24(context).copyWith(color: Colors.white),))
         ],
       ),
     );

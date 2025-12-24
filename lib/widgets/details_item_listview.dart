@@ -12,14 +12,18 @@ class DetailsItemListview extends StatelessWidget {
   ];
 
   @override
+
   Widget build(BuildContext context) {
     return Expanded(
-      child: ListView.builder(
-        itemCount: detailsItems.length,
-        shrinkWrap: true,
-        itemBuilder:(context, index) {
-          return DetailsItem(itemDetailsModel: detailsItems[index]);
-        },),
+      child: Column(
+        children: detailsItems.map((e) => DetailsItem(itemDetailsModel: e),).toList(),
+      ),
+      // child: ListView.builder(
+      //   itemCount: detailsItems.length,
+      //   shrinkWrap: true,
+      //   itemBuilder:(context, index) {
+      //     return DetailsItem(itemDetailsModel: detailsItems[index]);
+      //   },),
     );
   }
 }

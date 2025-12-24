@@ -26,17 +26,24 @@ class TransactionsHistorySection extends StatelessWidget {
           TransactionsHistoryHeader(),
           Gap(15),
           Text('13 April 2022',
-          style: AppStyles.styleMedium16.copyWith(
+          style: AppStyles.styleMedium16(context).copyWith(
             color: Color(0xffAAAAAA)
           ),
           ),
           Gap(10),
-          ListView.builder(
-            shrinkWrap: true,// to make ListView take only the space it needs (not Expand)
-            itemCount: transactionsItems.length,
-            itemBuilder: (context, index) {
-            return TransactionItem(transactionModel:transactionsItems[index] );
-          },)
+          Column(  // using column instead of Listviw.builder because listview.builder with ShrinkWrap:true make an error with CustomScrollView in Dashboard desktop layout
+            children: transactionsItems.map((e) => TransactionItem(transactionModel: e),).toList(),
+          )
+
+
+
+          
+          // ListView.builder(
+          //   shrinkWrap: true,// to make ListView take only the space it needs (not Expand)
+          //   itemCount: transactionsItems.length,
+          //   itemBuilder: (context, index) {
+          //   return TransactionItem(transactionModel:transactionsItems[index] );
+          // },)
           
         ],
       ),

@@ -11,7 +11,7 @@ class AllepensesAndQuickinvoiceSection extends StatelessWidget {
     return Column(
           children: [
             AllEpenses(),
-            Gap(15),
+            Gap(20),
             QuickInvoice()
           ],
         );

@@ -18,7 +18,7 @@ class MyCardSection extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text('My Card',style: AppStyles.styleSemiBold20,),
+          Text('My Card',style: AppStyles.styleSemiBold20(context),),
           Gap(10),
             MycardsPageview(),
         ],

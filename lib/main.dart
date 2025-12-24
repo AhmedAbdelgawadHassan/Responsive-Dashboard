@@ -3,12 +3,18 @@
 
 import 'dart:ui';
 
+import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_dashboard/views/dashboard_view.dart';
 
 void main()
 {
-  runApp(Responsive_Dashboard());
+  runApp(
+     DevicePreview(
+      enabled: true,
+      builder: (context) => Responsive_Dashboard()
+    ),
+  );
 }
 
 class Responsive_Dashboard extends StatelessWidget {
@@ -17,6 +23,8 @@ class Responsive_Dashboard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      locale: DevicePreview.locale(context),
+      builder: DevicePreview.appBuilder,
       debugShowCheckedModeBanner: false,
       scrollBehavior: MyCustomScrollBehavior(), // to enable scrolling with mouse drag in desktop
       home: DashboardView(),

@@ -12,7 +12,7 @@ class CardWidget extends StatelessWidget {
     return  AspectRatio(
             aspectRatio: 420 / 215, // Original Width and Height for the card
             child: Container(
-              padding: EdgeInsets.symmetric(vertical: 20, horizontal: 25),
+              padding: EdgeInsets.symmetric(vertical: 20, horizontal: 20),
               decoration: BoxDecoration(
                 color: Color(0XFF5EBCF0),
                 borderRadius: BorderRadius.circular(12),
@@ -28,9 +28,9 @@ class CardWidget extends StatelessWidget {
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                           Text('Name Card',style: AppStyles.styleMedium16.copyWith(color: Colors.white),),
+                           Text('Name Card',style: AppStyles.styleMedium16(context).copyWith(color: Colors.white),),
                            Gap(5),
-                      Text('Syah Bandi',style: AppStyles.styleMedium20,)
+                      Text('Syah Bandi',style: AppStyles.styleMedium20(context),)
                         ],
                       ),
                       Spacer(),
@@ -40,9 +40,10 @@ class CardWidget extends StatelessWidget {
                     ],
                   ),
                   Spacer(), // to still push the card number and expiry date to the bottom if the width or height changes
-                  Text('0918 8124 0042 8129',style: AppStyles.styleSemiBold24.copyWith(color: Colors.white),),
+                  Text('0918 8124 0042 8129',style: AppStyles.styleSemiBold24(context).copyWith(color: Colors.white),),
                   Gap(5),
-                  Text('12/20 - 124',style: AppStyles.styleMedium16.copyWith(color: Colors.white),)
+                  Text('12/20 - 124',style: AppStyles.styleMedium16(context).copyWith(color: Colors.white),),
+                  // Flexible(child: Gap(20))
                 ],
               ),
             ),

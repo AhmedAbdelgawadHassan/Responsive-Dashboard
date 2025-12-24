@@ -9,18 +9,33 @@ class DetailsItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return IntrinsicWidth(  //to wrap the width of ListTile according to its content
-      child: ListTile(
-        leading: Container(
-          width: 12,
-          decoration: BoxDecoration(
-            color: itemDetailsModel.dotColor,
-            shape: BoxShape.circle,
+      return ListTile(
+      leading: Container(
+        width: 12,
+        height: 12,
+        decoration: ShapeDecoration(
+          color: itemDetailsModel.dotColor,
+          shape: const OvalBorder(),
+        ),
+      ),
+      title: Align(
+        alignment: Alignment.centerLeft,
+        child: FittedBox(
+          fit:BoxFit.scaleDown ,
+          child: Text(
+            itemDetailsModel.title,
+            style: AppStyles.styleRegular16(context),
           ),
         ),
-        title: Text(itemDetailsModel.title,style: AppStyles.styleRegular16,),
-        trailing: Text({'${itemDetailsModel.percentage}%' }.toString(),style: AppStyles.styleRegular16,),
+      ),
+      trailing: FittedBox(
+        fit:BoxFit.scaleDown ,
+        child: Text(
+          itemDetailsModel.percentage.toString()+"%",
+          style: AppStyles.styleMedium16(context),
+        ),
       ),
     );
+    
   }
 }

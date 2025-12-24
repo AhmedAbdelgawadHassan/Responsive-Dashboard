@@ -13,8 +13,8 @@ class TitleTextfield extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
     children: [
-      Text(title,style: AppStyles.styleSemiBold12.copyWith(color: Colors.black),),
-      Gap(5),
+      Text(title,style: AppStyles.styleSemiBold18(context).copyWith(color: Colors.black),),
+      Gap(15),
       CustomTextfield(
         hintText: hintText,
       )

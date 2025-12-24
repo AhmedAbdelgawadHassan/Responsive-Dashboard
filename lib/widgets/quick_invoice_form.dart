@@ -18,7 +18,7 @@ class QuickInvoiceForm extends StatelessWidget {
                 title: 'Customer name',
               ),
             ),
-            Gap(16),
+            Gap(20),
             Expanded(
               child: TitleTextfield(
                 hintText: 'type Customer Email',
@@ -27,7 +27,7 @@ class QuickInvoiceForm extends StatelessWidget {
             ),
           ],
         ),
-        Gap(10),
+        Gap(20),
         Row(
           children: [
             Expanded(
@@ -36,7 +36,7 @@ class QuickInvoiceForm extends StatelessWidget {
                 title: 'customer name',
               ),
             ),
-            Gap(16),
+            Gap(20),
             Expanded(
               child: TitleTextfield(hintText: 'USDs', title: 'Item mount'),
             ),
