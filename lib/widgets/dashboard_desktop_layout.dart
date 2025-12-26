@@ -17,7 +17,7 @@ class DashboardDesktopLayout extends StatelessWidget {
         Gap(15),
         Expanded(
           flex: 5,
-          child: CustomScrollView(
+          child: CustomScrollView(  // to make AllepensesAndQuickinvoiceSection and MyCardandIncomeSections Scolling Togheter
             // because it has sliverfillRemaining that accepted Expanded widget .
             slivers: [
               SliverFillRemaining(

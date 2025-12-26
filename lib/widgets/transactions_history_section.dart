@@ -34,9 +34,6 @@ class TransactionsHistorySection extends StatelessWidget {
           Column(  // using column instead of Listviw.builder because listview.builder with ShrinkWrap:true make an error with CustomScrollView in Dashboard desktop layout
             children: transactionsItems.map((e) => TransactionItem(transactionModel: e),).toList(),
           )
-
-
-
           
           // ListView.builder(
           //   shrinkWrap: true,// to make ListView take only the space it needs (not Expand)

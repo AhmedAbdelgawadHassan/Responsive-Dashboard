@@ -36,9 +36,7 @@ class _AllExpnesesItemsListviewState extends State<AllExpnesesItemsListview> {
       ],
     );
     
-    
-    
-    
+        
     // Row(                // we doesn't use listview.builder because we have to put fixed height to AllExpenesesItem so we use Row insteadof listview.builder
     //   children: allExpensesItems.asMap().entries.map((e) {      // we use asMap() to get the index of each item
     //     int index =e.key;   // we use index to get the index of each item

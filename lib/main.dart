@@ -11,7 +11,7 @@ void main()
 {
   runApp(
      DevicePreview(
-      enabled: true,
+      enabled: false,
       builder: (context) => Responsive_Dashboard()
     ),
   );
@@ -31,6 +31,17 @@ class Responsive_Dashboard extends StatelessWidget {
     );
   }
 }
+
+
+
+
+
+
+
+
+
+
+
 class MyCustomScrollBehavior extends MaterialScrollBehavior {// to enable scrolling with mouse drag in desktop
   @override
   Set<PointerDeviceKind> get dragDevices => {

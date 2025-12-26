@@ -13,7 +13,7 @@ class CustomTextfield extends StatelessWidget {
         hintStyle: AppStyles.styleRegular14(context).copyWith(color: Color(0xffBDBDBD)),
         fillColor: Color(0xffF7F7F7),
         filled: true,
-        border: OutlineInputBorder(
+        border: OutlineInputBorder(  // enable and Focused States together
           borderSide: BorderSide.none,
           borderRadius: BorderRadius.circular(12)
         )

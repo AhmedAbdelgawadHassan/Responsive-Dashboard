@@ -14,7 +14,8 @@ class RangeOptions extends StatelessWidget {
             border: Border.all(color:Color(0XFFF1F1F1)),
             borderRadius: BorderRadius.circular(12)
           ),
-          child: Row(children: [
+          child: Row(
+            children: [
             Text('Monthly',style: AppStyles.styleMedium16(context),),
             Gap(18),
             Transform.rotate(  // to move the direction of icon to down side by angle

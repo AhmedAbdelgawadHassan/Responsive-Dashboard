@@ -21,7 +21,7 @@ class _DashboardViewState extends State<DashboardView> {
       child: Scaffold(
         backgroundColor: Color(0XFFF7F9FA),
         key: _scaffoldKey,
-        appBar: MediaQuery.of(context).size.width < 800?AppBar(    // show appbar only on mobile layout
+        appBar: MediaQuery.of(context).size.width < SizeConfig.tablet?AppBar(    // show appbar only on mobile layout
           backgroundColor: Color(0XFFFAFAFA),
           elevation: 0,
           leading: IconButton(onPressed: () {

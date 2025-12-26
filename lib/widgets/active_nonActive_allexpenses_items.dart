@@ -17,7 +17,7 @@ class NonActiveAllexpensesItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 20, vertical: 16),
+      padding: EdgeInsets.symmetric(horizontal: 10, vertical: 16),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(12),
         border: Border.all(color: Color(0XFFF1F1F1)),
@@ -33,7 +33,6 @@ class NonActiveAllexpensesItem extends StatelessWidget {
                   child: AspectRatio(
                     aspectRatio: 1,
                     child: Container(
-                            
                       decoration: BoxDecoration(
                         shape: BoxShape.circle,
                         color: Color(0XFFFAFAFA),
@@ -79,7 +78,7 @@ class ActiveAllexpensesItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 20, vertical: 16),
+      padding: EdgeInsets.symmetric(horizontal: 10, vertical: 16),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(12),
         border: Border.all(color: Color(0xff4DB5EF)),
@@ -95,7 +94,6 @@ class ActiveAllexpensesItem extends StatelessWidget {
                   child: AspectRatio(
                     aspectRatio: 1,
                     child: Container(
-                    
                       decoration: BoxDecoration(
                         shape: BoxShape.circle,
                         color: Color(0xff5FBCF1),

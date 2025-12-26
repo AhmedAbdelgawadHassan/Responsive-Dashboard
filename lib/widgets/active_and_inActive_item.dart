@@ -23,6 +23,10 @@ class InActiveDrawerItem extends StatelessWidget {
   }
 }
 
+
+
+
+
 class ActiveDrawerItem extends StatelessWidget {
   const ActiveDrawerItem({
     super.key,
@@ -39,7 +43,7 @@ class ActiveDrawerItem extends StatelessWidget {
         drawerItemModel.title,
         style: AppStyles.styleBold16(context)
       ),
-      trailing: Container(
+      trailing: Container(  // addional part
         width: 3.5,
         color: Color(0xff4EB7F2),
       ),

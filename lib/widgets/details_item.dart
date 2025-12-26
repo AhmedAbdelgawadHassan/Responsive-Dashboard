@@ -31,7 +31,7 @@ class DetailsItem extends StatelessWidget {
       trailing: FittedBox(
         fit:BoxFit.scaleDown ,
         child: Text(
-          itemDetailsModel.percentage.toString()+"%",
+          "${itemDetailsModel.percentage}%",
           style: AppStyles.styleMedium16(context),
         ),
       ),

@@ -13,7 +13,7 @@ class IncomSectionBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.sizeOf(context).width;
-    return width >=SizeConfig.desktop && width <= 1345
+    return width >=SizeConfig.desktop && width <= 1345  // 1345 is the breakpoint that is error occurs in / number not Fixed
         ? Padding(
           padding: const EdgeInsets.all(16.0),
           child: DetailedIncomeChart(),

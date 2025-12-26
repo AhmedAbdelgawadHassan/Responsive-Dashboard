@@ -16,7 +16,7 @@ class DetailsItemListview extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expanded(
       child: Column(
-        children: detailsItems.map((e) => DetailsItem(itemDetailsModel: e),).toList(),
+        children: detailsItems.map((e) => DetailsItem(itemDetailsModel: e),).toList(), // i used map instead of as map because i don't want to use index
       ),
       // child: ListView.builder(
       //   itemCount: detailsItems.length,

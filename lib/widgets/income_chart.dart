@@ -10,7 +10,9 @@ class IncomeChart extends StatefulWidget {
 }
 
 class _IncomeChartState extends State<IncomeChart> {
-  int activeIndex = -1;
+  int activeIndex = -1; // -1 by default means no section is selected
+
+
   @override
   Widget build(BuildContext context) {
     return AspectRatio(
@@ -18,23 +20,22 @@ class _IncomeChartState extends State<IncomeChart> {
       child: PieChart(getChartData()),
     );
   }
-
-  PieChartData getChartData() {
+  PieChartData getChartData() {   // Method return PieChartData
     return PieChartData(
       pieTouchData: PieTouchData(
         enabled: true,
         touchCallback: (p0, pietouchResponse) {
           activeIndex =
-              pietouchResponse?.touchedSection?.touchedSectionIndex ?? -1;
+              pietouchResponse?.touchedSection!.touchedSectionIndex??-1 ;
           setState(() {});
         },
       ),
       sectionsSpace: 0,
       sections: [
         PieChartSectionData(
-          showTitle: false,
+          showTitle: false,  // to hide the title
           value: 40,
-          radius: activeIndex == 0 ? 60 : 50,
+          radius: activeIndex == 0 ? 60 : 50, 
           color: const Color(0xFF208BC7),
         ),
         PieChartSectionData(

@@ -12,7 +12,10 @@ class DrawerItemsListview extends StatefulWidget {
 
 class _DrawerItemsListviewState extends State<DrawerItemsListview> {
   final List<DrawerItemModel> drawerItems = [
-    DrawerItemModel(image: AppImages.imagesDashboard, title: 'Dashboard'),
+    DrawerItemModel(
+      image: AppImages.imagesDashboard,
+       title: 'Dashboard',
+       ),
     DrawerItemModel(
       image: AppImages.imagesMyTransctions,
       title: 'My Transactions',
@@ -38,15 +41,15 @@ class _DrawerItemsListviewState extends State<DrawerItemsListview> {
         return GestureDetector(
           onTap: () {
             setState(() {
-              selectedIndex = index;// Update the selectedIndex when an item is tapped
+              selectedIndex = index; // Update the selectedIndex when an item is tapped
             });
           },
           child: Padding(
             padding: EdgeInsets.only(top: 20),
             child: DrawerItem(
               drawerItemModel: drawerItems[index],
-              isActive: selectedIndex == index,   // Check if the current index matches the selected index -->true 
-              ),
+              isActive: selectedIndex == index, // Check if the current index matches the selected index -->true
+            ),
           ),
         );
       },
